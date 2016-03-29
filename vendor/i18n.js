@@ -419,7 +419,16 @@
 
     if (!translationFound) {
       //return this.missingTranslation(scope, options);
+      //console.log( this.missingTranslation(scope, options) );
       console.log( this.missingTranslation(scope, options) );
+      var tmpLocal=this.locale
+      if (this.locale!="en-US") {
+        this.locale="en-US";
+        var tmp = this.t(scope);
+        console.log(tmp);
+        return tmp;
+        this.locale=tmpLocal;
+      } 
       return scope;//this.missingTranslation(scope, options);
     }
 
