@@ -418,7 +418,9 @@
       }, this);
 
     if (!translationFound) {
-      return this.missingTranslation(scope, options);
+      //return this.missingTranslation(scope, options);
+      console.log( this.missingTranslation(scope, options) );
+      return scope;//this.missingTranslation(scope, options);
     }
 
     if (typeof(translation) === "string") {
